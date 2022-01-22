@@ -22,14 +22,6 @@ install_kubevela() {
   ln -sf ${install_path}/bin/kubectl-vela ${install_path}/bin/kubevela
   chmod +x "${install_path}/bin"
   rm -rf "${install_path}/kubevela.tar.gz" "${install_path}/${platform}"
-
-  # # Only check for first symbolic link, if first attempt is success, subsequent should success
-  # # as well
-  # $SUDO ln -sf ${install_path}/bin/kubectl-vela /usr/local/bin/kubectl-vela >/dev/null 2>&1 || {
-  #   echo "ERROR: Please ensure you have SUDO permission to copy kubectl-vela to /usr/local/bin."
-  #   exit 1
-  # }
-  # $SUDO ln -sf ${install_path}/bin/kubectl-vela /usr/local/bin/vela
   echo "Kubevela version ${version} has been successfully installed."
 }
 
