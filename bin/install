@@ -19,9 +19,9 @@ install_kubevela() {
   # Strip the parent folder that identified platform
   tar xzf "${install_path}/kubevela.tar.gz" -C "${install_path}" --strip-components=1
   mv "${install_path}/kubectl-vela" "${bin_path}"
+  chmod +x "${bin_path}"
   ln -sf ${bin_path} ${install_path}/bin/vela
   ln -sf ${bin_path} ${install_path}/bin/kubevela
-  chmod +x "${install_path}/bin"
   rm -rf "${install_path}/kubevela.tar.gz"
 }
 
