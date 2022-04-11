@@ -12,7 +12,7 @@ install_kubevela() {
   local download_url=$(get_download_url $version $platform)
   local bin_path="${bin_install_path}/kubectl-vela"
 
-  mkdir -p "${bin_install_path}" "/usr/local/bin"
+  mkdir -p "${bin_install_path}"
 
   echo "Downloading kubevela from ${download_url}"
   curl -sSL "$download_url" -o "${install_path}/kubevela.tar.gz"
