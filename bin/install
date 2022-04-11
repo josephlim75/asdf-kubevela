@@ -9,8 +9,8 @@ install_kubevela() {
   local install_path=$3
   local platform="$(uname | tr '[:upper:]' '[:lower:]')-$(get_cpu)"
   local bin_install_path="$install_path/bin"
-  local download_url=$(get_download_url $version $platform)
   local bin_path="${bin_install_path}/kubectl-vela"
+  local download_url=$(get_download_url $version $platform)
 
   mkdir -p "${bin_install_path}"
 
