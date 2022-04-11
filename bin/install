@@ -17,12 +17,12 @@ install_kubevela() {
   echo "Downloading kubevela from ${download_url}"
   curl -sSL "$download_url" -o "${install_path}/kubevela.tar.gz"
   tar xzf "${install_path}/kubevela.tar.gz" -C "${install_path}"
-  mv ${install_path}/${platform}/* ${install_path}/bin
-  ln -sf ${install_path}/bin/kubectl-vela ${install_path}/bin/vela
-  ln -sf ${install_path}/bin/kubectl-vela ${install_path}/bin/kubevela
-  chmod +x "${install_path}/bin"
-  rm -rf "${install_path}/kubevela.tar.gz" "${install_path}/${platform}"
-  echo "Kubevela version ${version} has been successfully installed."
+  #mv ${install_path}/${platform}/* ${install_path}/bin
+  #ln -sf ${install_path}/bin/kubectl-vela ${install_path}/bin/vela
+  #ln -sf ${install_path}/bin/kubectl-vela ${install_path}/bin/kubevela
+  #chmod +x "${install_path}/bin"
+  #rm -rf "${install_path}/kubevela.tar.gz" "${install_path}/${platform}"
+  #echo "Kubevela version ${version} has been successfully installed."
 }
 
 get_cpu() {
