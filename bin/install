@@ -43,7 +43,7 @@ get_cpu() {
 get_download_url() {
   local version="$1"
   local platform="$2"
-  echo "https://github.com/oam-dev/kubevela/releases/download/${version}/kubectl-vela-${version}-${platform}.tar.gz"
+  echo "https://github.com/oam-dev/kubevela/releases/download/${version}/kubectl-vela-v${version}-${platform}.tar.gz"
 }
 
 install_kubevela $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
